@@ -230,7 +230,8 @@ static int oqsx_import(void *keydata, int selection,
     }
 
     if (((selection & OSSL_KEYMGMT_SELECT_KEYPAIR) != 0) &&
-        (oqsx_key_fromdata(key, params, selection & OSSL_KEYMGMT_SELECT_PRIVATE_KEY)))
+        (oqsx_key_fromdata(key, params,
+                           selection & OSSL_KEYMGMT_SELECT_PRIVATE_KEY)))
         ok = 1;
     return ok;
 }
